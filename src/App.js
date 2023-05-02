@@ -1,10 +1,6 @@
-import logo from './logo.svg';
-import styles from "./App.css";
-import { GoVerified } from 'react-icons/go'
 import { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
-// import './App.css';
-// AiFillPlusSquare
+
 
 // get data from LS
 const getLocalData = () => {
@@ -24,9 +20,6 @@ function App() {
   // add
   const addCount = () => {
     setCount(count + 1)
-    // if (count + 1 >= 200) {
-    //   setAlertVisible(true);
-    // }
     toast.success('Count increase by 1')
   }
 
@@ -37,9 +30,6 @@ function App() {
       toast.warning('You reached the minimum value');
     } else {
       setCount(count - 1);
-      // if (count - 1 < 200) {
-      //   setAlertVisible(false);
-      // }
       toast.success('Count decreased by 1');
     }
 
