@@ -15,7 +15,7 @@ const getLocalData = () => {
 function App() {
   const [count, setCount] = useState(parseInt(getLocalData()));
   const [alertVisible, setAlertVisible] = useState(false);
-  const [customValue, setCustomValue] = useState(0);
+  const [customValue, setCustomValue] = useState("");
 
 
   // add
