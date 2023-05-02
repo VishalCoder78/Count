@@ -51,9 +51,9 @@ function App() {
    if(count > 200){
       setAlertVisible(true);
    } else{
-        setAlertVisible(false);
+      setAlertVisible(false);
    }
-  })
+  }, [setAlertVisible])
 
 
   // add to local storage
