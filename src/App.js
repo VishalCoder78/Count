@@ -53,7 +53,7 @@ function App() {
    } else{
       setAlertVisible(false);
    }
-  }, [setAlertVisible])
+  }, [])
 
 
   // add to local storage
