@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./App.css";
+import "./App.css";
 import { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 
