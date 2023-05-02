@@ -48,12 +48,12 @@ function App() {
 
   // hit target alert
   useEffect(() => {
-   if(count > 200){
+    if (count > 200) {
       setAlertVisible(true);
-   } else{
+    } else {
       setAlertVisible(false);
-   }
-  }, [])
+    }
+  }, [count]);
 
 
   // add to local storage
