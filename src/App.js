@@ -15,7 +15,7 @@ const getLocalData = () => {
 function App() {
   const [count, setCount] = useState(parseInt(getLocalData()));
   const [alertVisible, setAlertVisible] = useState(false);
-  const [customValue, setCustomValue] = useState("0");
+  const [customValue, setCustomValue] = useState("");
   const [remaining, setRemaining] = useState("");
   const [maxValue, setMaxValue] = useState(200);
   const [valueMsg, setValueMsg] = useState("");
@@ -52,7 +52,7 @@ function App() {
 
   // hit target alert
   useEffect(() => {
-    if (count > 0) {
+    if (count > maxValue) {
       setAlertVisible(true);
       setValueMsg("you crossed your ")
     } else {
@@ -133,7 +133,7 @@ function App() {
   return (
     <div className="grid grid-cols-3">
 
-      <div className="pt-10 w-full h-screen">
+      <div className="mt-20 w-full h-screen">
         <div className="">
           <div className="my-2">
             <p className="text-center text-gray-200">Set your minimum and maximum target</p>
@@ -184,11 +184,8 @@ function App() {
 
       <div className="w-full h-screen ">
 
-        <div className='my-16'>
-          {alertVisible && <p className='text-2xl text-gray-300 text-center mt-20'>Your daily target is completed! </p>}
-        </div>
 
-        <div className=' flex justify-center items-center'>
+        <div className=' flex justify-center items-center mt-20'>
           <button onClick={subCount} className='text-gray-700 bg-gray-900 text-7xl rounded-md px-7 pb-2'>-</button>
           <p className='text-6xl text-gray-300 px-5 py-2'>{count}</p>
           <button onClick={addCount} className='text-gray-700 bg-gray-900 text-7xl rounded-md px-5 pb-2'>+</button>
@@ -198,7 +195,10 @@ function App() {
           <button className='px-6 py-2 bg-gray-900 text-gray-500 font-bold rounded-md ' onClick={resetCount}>Reset</button>
         </div>
 
-        
+        <div className='my-16'>
+          {alertVisible && <p className='text-2xl text-gray-300 text-center mt-20'>Your daily target is completed! </p>}
+        </div>
+
 
       </div>
 
@@ -211,11 +211,11 @@ function App() {
               <p className="text-gray-300">Status</p>
             </div>
             <div className="text-left space-y-2">
-                <p className="ml-2 mr-8 text-gray-300">Min: {minValue} </p>
-                <p className="ml-2 mr-8 text-gray-300"> Max: {maxValue}</p>
-                <p className="ml-2 mr-8 text-gray-300">Reamaining: {remaining}</p>
-                <p className="ml-2 mr-8 text-gray-300">Completed: {maxValue}</p>
-                <p className="ml-2 mr-8 text-gray-300">Completed: {maxValue}</p>
+              <p className="ml-2 mr-8 text-gray-300">Min: {minValue} </p>
+              <p className="ml-2 mr-8 text-gray-300"> Max: {maxValue}</p>
+              <p className="ml-2 mr-8 text-gray-300">Reamaining: {remaining}</p>
+              <p className="ml-2 mr-8 text-gray-300">Completed: {maxValue}</p>
+              <p className="ml-2 mr-8 text-gray-300">Completed: {maxValue}</p>
 
             </div>
 
